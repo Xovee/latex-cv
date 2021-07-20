@@ -1,0 +1,201 @@
+% LaTeX Curriculum Vitae
+% Author: Xovee Xu (https://xovee.cn)
+% Last Update: July 20, 2020
+% Latest Version: https://github.com/Xovee/latex-cv
+% Current Version: v0.9
+% LICENSE: MIT
+
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[full]{textcomp}
+\usepackage{CJKutf8}
+\usepackage[lf]{ebgaramond}
+% \usepackage[osf,scaled]{garamondx}
+
+\usepackage{enumitem}
+\usepackage[scale=.75]{geometry}
+\usepackage{url}
+\usepackage{xcolor}
+
+% package settings
+\usepackage[
+    hidelinks,
+    pdfnewwindow=true,
+    pdfauthor={Xovee Xu},
+    pdftitle={Curriculum Vitae},
+]{hyperref}
+
+\pagestyle{headings}
+\markright{\textbf{Xovee Xu}}
+
+\setlength\parindent{2em}
+
+% define cv section
+\newcommand{\CVsection}[1]{
+    \vspace{-8pt}
+    \section*{#1}
+    \vspace{-4pt}
+}
+% define cv subsection
+\newcommand{\CVsubsection}[1]{
+    \subsection*{\textnormal{\textit{#1}}}
+}
+
+\thispagestyle{empty}
+
+% begin
+\begin{document}
+
+\begin{center}
+    \vspace*{5pt}
+    \Huge{
+    \textbf{Xovee Xu}}
+\end{center}
+\vspace{15pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Contact Information %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parskip}{1pt}
+
+\noindent PhD Student in Computer Science \hfill \href{mailto:xovee@std.uestc.edu.cn}{xovee@std.uestc.edu.cn}
+
+\noindent School of Computer Science and Engineering \hfill \url{https://xovee.cn}
+
+\noindent University of Electronic Science and Technology of China (UESTC)
+
+\noindent Chengdu, Sichuan 611731, China
+
+\setlength{\parskip}{3pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Education %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CVsection{Education}
+\indent 
+
+Ph.D., Computer Science, University of Electronic Science and Technology of China, 2021 to 2025 (expc.)
+
+M.S., Software Engineering, University of Electronic Science and Technology of China, 2021
+
+B.S., Software Engineering, University of Electronic Science and Technology of China, 2018
+
+\CVsection{Academic Employment}
+\indent
+
+Professor, Standard University, 2021 - 
+
+Research Assistant, University of Electronic Science and Technology of China, 2018 - 2021
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Distinction %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CVsection{Distinction}
+\indent
+
+A.M. Turing Award, ACM, 2077
+
+Excellent Master Thesis, 105/4929; and PhD Entrance Scholarship, UESTC, 2021
+
+Outstanding Graduate Student; and First Prize Scholarship, UESTC, 2020
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Academic Service %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CVsection{Academic Service}
+
+\CVsubsection{Editor-in-Chief}
+\vspace{-4pt}
+\indent
+
+Journal of Curriculum Vitae, 2077 -
+
+Journal of \LaTeX, 2066 - 2077
+
+\CVsubsection{General Chair}
+\vspace{-4pt}
+\indent
+
+International Conference on How to Write CV, 2077
+
+\CVsubsection{Ad Hoc Reviewer}
+\vspace{-4pt}
+\indent
+
+IEEE Transactions on Knowledge and Data Engineering (TKDE)
+
+IEEE/ACM Transaction on Network (TON)
+
+\CVsubsection{Volunteer}
+\vspace{-4pt}
+\indent
+
+Student Volunteer, SIGIR 2021, Online Conference, Jul 11-15, 2021
+
+\CVsubsection{Professional Membership}
+\vspace{-4pt}
+\indent
+
+Association for Computing Machinery (ACM)
+
+\hspace{2em}Member (2020)
+
+Institute of Electrical and Electronics Engineers (IEEE)
+
+\hspace{2em}Graduate Student Member (2020)
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Publication %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{article.tex}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Teaching %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CVsection{Teaching Experience}
+\indent
+
+\textbf{C Programming Language}\hfill Spring 2020
+
+\hspace{2em}Teaching Assistant, with Prof. Ting Zhong, at UESTC
+
+\textbf{Software Project Management}\hfill Summer 2019
+
+\hspace{2em}Teaching Assistant, with Prof. Gianmario Motta (University of Pavia), at UESTC
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Language %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CVsection{Language}
+\indent
+
+Native Chinese (Mandarin \& Northern Shaanxi Dialect)
+
+Fluent English
+
+
+\vfill
+
+\section*{\hfill Last update: \today}
+
+\end{document}
