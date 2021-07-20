@@ -19,6 +19,10 @@ The use of this template should be fairly straightforward: see `cv.tex`.
 
 In this template, `ebgaramond` font has been used. I personally used `garamondx`, you need additional steps to install this font. Of course, you can easily adopt other kinds of fonts. 
 
+### BibTeX
+
+If you want to use `bibtex` or other similar packages, create your bibliography file `.bib` and import it into `cv.tex`, rather than manually type articles which I did in this template. 
+
 ## LICENSE
 
 MIT
