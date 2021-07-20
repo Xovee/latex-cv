@@ -17,7 +17,7 @@ The use of this template should be fairly straightforward: see `cv.tex`.
 
 ### Font
 
-In this template, `ebgaramond` font has been used. I personally used `garamondx`, you need addtional steps to install this font. Of course, you can easily adopt other kinds of fonts. 
+In this template, `ebgaramond` font has been used. I personally used `garamondx`, you need additional steps to install this font. Of course, you can easily adopt other kinds of fonts. 
 
 ## LICENSE
 
