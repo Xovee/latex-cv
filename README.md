@@ -1,5 +1,8 @@
 # [Xovee Xu](https://xovee.cn)'s Curriculum Vitae
 
+
+[![](https://img.shields.io/badge/Overleaf-Use_This_Template_Olnine-green)](https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf)
+
 This repo provides a CV template designed by Xovee Xu. 
 
 - If you use this template or you like it, consider give me a star!
