@@ -32,16 +32,13 @@
 
 \setlength\parindent{2em}
 
+
 % define cv section
-\newcommand{\CVsection}[1]{
-    \vspace{-8pt}
-    \section*{#1}
-    \vspace{-4pt}
-}
+\newcommand{\CVsec}[1]{
+    \vspace{-8pt}\section*{#1}\vspace{-4pt}}
 % define cv subsection
-\newcommand{\CVsubsection}[1]{
-    \subsection*{\textnormal{\textit{#1}}}
-}
+\newcommand{\CVsubsec}[1]{
+    \subsection*{\textnormal{\textit{#1}}}}
 
 \thispagestyle{empty}
 
@@ -51,20 +48,21 @@
 \begin{center}
     \vspace*{5pt}
     \Huge{
-    \textbf{Xovee Xu}}
+    \textbf{Xovee Xu (CV Template)}}
 \end{center}
 \vspace{15pt}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Contact Information %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Contact Information
 \setlength{\parskip}{1pt}
 
 \noindent PhD Student in Computer Science \hfill \href{mailto:xovee@std.uestc.edu.cn}{xovee@std.uestc.edu.cn}
 
 \noindent School of Computer Science and Engineering \hfill \url{https://xovee.cn}
 
-\noindent University of Electronic Science and Technology of China (UESTC)
+\noindent University of Electronic Science and Technology of China (UESTC) \hfill (+86) 181-xxxx-xxxx
 
 \noindent Chengdu, Sichuan 611731, China
 
@@ -73,32 +71,72 @@
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%% Education %%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\CVsection{Education}
-\indent 
-
-Ph.D., Computer Science, University of Electronic Science and Technology of China, 2021 to 2025 (expc.)
-
-M.S., Software Engineering, University of Electronic Science and Technology of China, 2021
-
-B.S., Software Engineering, University of Electronic Science and Technology of China, 2018
-
-\CVsection{Academic Employment}
+% Summary / Statement
+\section*{Summary / Statement}
 \indent
 
-Professor, Standard University, 2021 - 
-
-Research Assistant, University of Electronic Science and Technology of China, 2018 - 2021
+\hangindent=2emI have rich experience and strong skills in ... I want ...
 
 
+% Education
+\section*{Education}
+\indent 
+
+\textbf{University of Electronic Science and Technology of China (UESTC)}, Chengdu, China
+
+\hspace{2em}Ph.D. Student, Computer Science, 2021 to 2025 (expc.)
+
+\hspace{2em}M.S., Software Engineering, 2021
+
+\hspace{2em}B.S., Software Engineering, 2018
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% Distinction %%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\CVsection{Distinction}
+% below is another kind of style
+
+% Ph.D., Computer Science, University of Electronic Science and Technology of China, 2021 to 2025 (expc.)
+
+% M.S., Software Engineering, University of Electronic Science and Technology of China, 2021
+
+% B.S., Software Engineering, University of Electronic Science and Technology of China, 2018
+
+
+% academic employment
+\section*{Academic Employment}
+\indent
+
+\textbf{Standard University}, CA, USA
+
+\hspace{2em}Dean, Dept. of Computer Science, 2080 - 
+
+\hspace{2em}Professor, 2077 - 
+
+\hspace{2em}Associate Professor, 2066 - 2077
+
+\hspace{2em}Assistant Professor, 2060 - 2066
+
+\textbf{University of Electronic Science and Technology of China (UESTC)}, Chengdu, China
+
+\hspace{2em}Research Assistant, 2018 - 
+
+
+\section*{Academic Employment (Another Style)}
+\indent
+
+Dean, Dept. of Computer Science, Standard University, CA, USA, 2080 -
+
+Professor, Standard University, CA, USA, 2077 -
+
+Associated Professor, Standard University, CA, USA, 2066 - 2077
+
+Assistant Professor, Standard University, CA, USA, 2060 - 2066
+
+Research Assistant, University of Electronic Science and Technology of China, Chengdu, China, 2018 - 2025
+
+
+
+
+% distinction, award, honor, and fellowship
+\section*{Distinction}
 \indent
 
 A.M. Turing Award, ACM, 2077
@@ -110,66 +148,54 @@ Outstanding Graduate Student; and First Prize Scholarship, UESTC, 2020
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Academic Service %%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\CVsection{Academic Service}
+% academic service
+\section*{Academic Service}
 
-\CVsubsection{Editor-in-Chief}
-\vspace{-4pt}
+\subsection*{\hspace{1em}Editor-in-Chief}
 \indent
 
 Journal of Curriculum Vitae, 2077 -
 
 Journal of \LaTeX, 2066 - 2077
 
-\CVsubsection{General Chair}
-\vspace{-4pt}
+\subsection*{\hspace{1em}General Chair}
 \indent
 
 International Conference on How to Write CV, 2077
 
-\CVsubsection{Ad Hoc Reviewer}
-\vspace{-4pt}
+\subsection*{\hspace{1em}Ad Hoc Reviewer}
 \indent
 
 IEEE Transactions on Knowledge and Data Engineering (TKDE)
 
 IEEE/ACM Transaction on Network (TON)
 
-\CVsubsection{Volunteer}
-\vspace{-4pt}
-\indent
-
-Student Volunteer, SIGIR 2021, Online Conference, Jul 11-15, 2021
-
-\CVsubsection{Professional Membership}
-\vspace{-4pt}
+\subsection*{\hspace{1em}Professional Membership}
 \indent
 
 Association for Computing Machinery (ACM)
 
-\hspace{2em}Member (2020)
-
-Institute of Electrical and Electronics Engineers (IEEE)
-
-\hspace{2em}Graduate Student Member (2020)
+\hspace{2em}Fellow (2080), Senior Member (2077), Member (2020)
 
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% Publication %%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% publication
 \input{article.tex}
 
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%% Teaching %%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\CVsection{Teaching Experience}
+% talks
+\section*{Invited Talk}
+\indent 
+
+University of CV, Dept. of Linguistics, 2077 
+
+
+
+% teaching experience 
+\section*{Teaching Experience}
 \indent
 
 \textbf{C Programming Language}\hfill Spring 2020
@@ -183,10 +209,32 @@ Institute of Electrical and Electronics Engineers (IEEE)
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%% Language %%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\CVsection{Language}
+% industrial experience
+\section*{Industrial Experience}
+\indent
+
+\textbf{Strawberry Inc.}, Beijing, China
+
+\hspace{2em}Co-funder, 2077 - 
+
+\textbf{Delicious Mango Holdings Ltd.}, London, UK
+
+\hspace{2em}\LaTeX~Engineer Intern, 2076 - 2077
+
+\textbf{CV Agency Co. Ltd.}, Hawaii, USA
+
+\hspace{2em}CV Broker, 2075 - 2076
+\begin{itemize}[leftmargin=5em, topsep=0pt, itemsep=0pt]
+    \item Helped a three-year old child create her first CV
+    \item Hilight 2 ...
+    \item Hilight 3 ...
+\end{itemize}
+
+
+
+
+% language
+\section*{Language}
 \indent
 
 Native Chinese (Mandarin \& Northern Shaanxi Dialect)
@@ -194,8 +242,19 @@ Native Chinese (Mandarin \& Northern Shaanxi Dialect)
 Fluent English
 
 
+
+
+% reference 
+\section*{Reference}
+\indent
+
+\textbf{Dr. Xovee Xu}, Professor and Chair, Dept. of Curriculum Vitae, University of Standard
+
+\hspace{2em}(+86) 181-xxxx-xxxx \hspace{2em} \url{xovee@ieee.org}
+
+
 \vfill
 
-\section*{\hfill Last update: \today}
+\section*{\hfill\today}
 
 \end{document}
