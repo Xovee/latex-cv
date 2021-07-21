@@ -13,7 +13,7 @@ This repo provides a CV template designed by Xovee Xu.
 
 ## Usage
 
-The use of this template should be fairly straightforward: see `cv.tex`.
+The use of this template should be fairly straightforward: see [cv.tex](https://github.com/Xovee/latex-cv/blob/main/cv.tex).
 
 ### Font
 
