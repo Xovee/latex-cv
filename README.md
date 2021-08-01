@@ -1,7 +1,7 @@
 # LaTeX Curriculum Vitae Template
 
 
-[![](https://img.shields.io/badge/Overleaf-Use_This_Template_Olnine-green)](https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf)
+[![](https://img.shields.io/badge/Overleaf-Use_This_Template_Online-green)](https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf)
 
 This repo provides a CV template designed by [Xovee Xu](https://xovee.cn).
 
