@@ -13,53 +13,57 @@
 \usepackage[full]{textcomp}
 \usepackage{CJKutf8}
 \usepackage[lf]{ebgaramond}
-% \usepackage[osf,scaled]{garamondx}
+% \usepackage[scaled,swashQ]{garamondx}
+\usepackage[T1]{fontenc}
 
 \usepackage{enumitem}
-\usepackage[scale=.75]{geometry}
+\usepackage[a4paper,left=.9in, right=.9in, top=1.5in, bottom=1.5in]{geometry}
 \usepackage{url}
 \usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
 
 % package settings
 \usepackage[
     hidelinks,
     pdfnewwindow=true,
     pdfauthor={Xovee Xu},
-    pdftitle={Curriculum Vitae},
+    pdftitle={Curriculum Vitae of Xovee Xu},
 ]{hyperref}
 
 \pagestyle{headings}
-\markright{\textbf{Xovee Xu}}
+\markright{\textbf{Your Name}}
 
 \setlength\parindent{2em}
 
 \thispagestyle{empty}
 
-\newcommand{\cvsubsection}[1]{\subsection*{\hspace{1.45em}#1}}
+% define cv section
+\newcommand{\cvsection}[1]{\section*{\rmfamily#1}}
+\newcommand{\cvsubsection}[1]{\subsection*{\rmfamily\hspace{1.6em}#1}}
 
 % begin
 \begin{document}
 
+% name
 \begin{center}
-    \vspace*{5pt}
     \Huge{
-    \textbf{Xovee Xu (CV Template)}}
+    \rmfamily
+    \textbf{Your Name}}
 \end{center}
-\vspace{15pt}
+\vspace{20pt}
 
 
-
+\setlength{\parskip}{1pt}
+\renewcommand{\arraystretch}{1.25}
 
 % Contact Information
-\setlength{\parskip}{1pt}
 
-\noindent PhD Student in Computer Science \hfill \href{mailto:xovee@std.uestc.edu.cn}{xovee@std.uestc.edu.cn}
+\noindent School of Computer Science and Engineering \hfill (+86) 123-456-789
 
-\noindent School of Computer Science and Engineering \hfill \url{https://xovee.cn}
+\noindent University of Electronic Science and Technology of China (UESTC)\hfill \href{mailto:xovee@std.uestc.edu.cn}{\texttt{xovee@std.uestc.edu.cn}}
 
-\noindent University of Electronic Science and Technology of China (UESTC) \hfill (+86) 181-xxxx-xxxx
+\noindent Chengdu, Sichuan 610054, China\hfill \url{https://xovee.cn}
 
-\noindent Chengdu, Sichuan 611731, China
 
 \setlength{\parskip}{3pt}
 
@@ -67,14 +71,14 @@
 
 
 % Summary / Statement
-\section*{Summary / Statement}
+\cvsection{Summary / Statement}
 \indent
 
 \hangindent=2emI have rich experience and strong skills in ... I want ...
 
 
 % Education
-\section*{Education}
+\cvsection{Education}
 \indent 
 
 \textbf{University of Electronic Science and Technology of China (UESTC)}, Chengdu, China
@@ -87,16 +91,18 @@
 
 
 % below is another kind of style
+\cvsection{Education (Another Style)}
+\indent 
 
-% Ph.D., Computer Science, University of Electronic Science and Technology of China, 2021 to 2025 (expc.)
+Ph.D., Computer Science, University of Electronic Science and Technology of China, 2021 to 2025 (expc.)
 
-% M.S., Software Engineering, University of Electronic Science and Technology of China, 2021
+M.S., Software Engineering, University of Electronic Science and Technology of China, 2021
 
-% B.S., Software Engineering, University of Electronic Science and Technology of China, 2018
+B.S., Software Engineering, University of Electronic Science and Technology of China, 2018
 
 
 % academic employment
-\section*{Academic Employment}
+\cvsection{Academic Employment}
 \indent
 
 \textbf{Standard University}, CA, USA
@@ -111,10 +117,10 @@
 
 \textbf{University of Electronic Science and Technology of China (UESTC)}, Chengdu, China
 
-\hspace{2em}Research Assistant, 2018 - 
+\hspace{2em}Postdoc, 2059 - 2060
 
 
-\section*{Academic Employment (Another Style)}
+\cvsection{Academic Employment (Another Style)}
 \indent
 
 Dean, Dept. of Computer Science, Standard University, CA, USA, 2080 -
@@ -125,26 +131,22 @@ Associated Professor, Standard University, CA, USA, 2066 - 2077
 
 Assistant Professor, Standard University, CA, USA, 2060 - 2066
 
-Research Assistant, University of Electronic Science and Technology of China, Chengdu, China, 2018 - 2025
+Postdoc, University of Electronic Science and Technology of China, Chengdu, China, 2059 - 2060
 
 
 
 
 % distinction, award, honor, and fellowship
-\section*{Distinction}
+\cvsection{Distinction}
 \indent
 
 A.M. Turing Award, ACM, 2077
 
-Excellent Master Thesis, 105/4929; and PhD Entrance Scholarship, UESTC, 2021
-
-Outstanding Graduate Student; and First Prize Scholarship, UESTC, 2020
-
-
+Excellent Master Thesis, 105/4929, UESTC, 2021
 
 
 % academic service
-\section*{Academic Service}
+\cvsection{Academic Service}
 
 \cvsubsection{Editor-in-Chief}
 \indent
@@ -182,7 +184,7 @@ Association for Computing Machinery (ACM)
 
 
 % talks
-\section*{Invited Talk}
+\cvsection{Invited Talk}
 \indent 
 
 University of CV, Dept. of Linguistics, 2077 
@@ -190,7 +192,7 @@ University of CV, Dept. of Linguistics, 2077
 
 
 % teaching experience 
-\section*{Teaching Experience}
+\cvsection{Teaching Experience}
 \indent
 
 \textbf{C Programming Language}\hfill Spring 2020
@@ -229,7 +231,7 @@ University of CV, Dept. of Linguistics, 2077
 
 
 % language
-\section*{Language}
+\cvsection{Language}
 \indent
 
 Native Chinese (Mandarin \& Northern Shaanxi Dialect)
@@ -240,12 +242,19 @@ Fluent English
 
 
 % reference 
-\section*{Reference}
+\cvsection{Reference}
 \indent
 
 \textbf{Dr. John Smith}, Professor and Chair, Dept. of Curriculum Vitae, University of Standard
 
 \hspace{2em}(+86) 181-xxxx-xxxx \hspace{2em} \url{xovee@ieee.org}
+
+
+% other things
+\cvsection{Any Other Sections}
+\indent 
+
+Wow! A lengthy CV!
 
 
 \vfill

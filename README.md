@@ -9,7 +9,7 @@ This repo provides a CV template designed by [Xovee Xu](https://xovee.cn).
 
 - If you have any suggestions, contact me at `xovee at ieee.org`
 
-- See a sample below. You can have a look on my CV [here](https://xovee.cn/archive/cv/cv.pdf).
+- See a sample below. You can have a look at my personal academic CV [here](https://xovee.cn/archive/cv/cv.pdf).
 
 ![CV Example](example.png)
 
@@ -24,9 +24,11 @@ This template uses `ebgaramond` font.
 
 I personally use [`garamondx`](https://www.ctan.org/pkg/garamondx), you can install this font via [`getnonfreefonts`](https://www.google.com/search?q=getnonfreefonts). 
 
+Other fonts like Times New Roman, Roboto, Open Sans, Helvetica can be easily used via `\usepackage{some-font}`; reference: [The $\LaTeX$ Font Catalogue](https://tug.org/FontCatalogue/). 
+
 ### BibTeX
 
-If you want to use `bibtex` or other similar packages, create your bibliography file `.bib` and import it into `cv.tex`, rather than manually type bibliographies. 
+If you want to use `bibtex` or other similar packages, create your bibliography file `.bib` and import it into `cv.tex`. For myself, I manually type all of my papers (full control :satisfied:). 
 
 ## Quick TIPs
 
@@ -44,4 +46,3 @@ MIT
 ## Contact
 
 `xovee at ieee.org`
-
