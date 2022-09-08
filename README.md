@@ -16,7 +16,7 @@ This repo provides a CV template designed by [Xovee Xu](https://xovee.cn).
 
 ## Usage
 
-Just play [cv.tex](https://github.com/Xovee/latex-cv/blob/main/cv.tex).
+Just play [cv.tex](https://github.com/Xovee/latex-cv/blob/main/cv.tex) or use [Overleaf](https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf).
 
 ### Font
 
