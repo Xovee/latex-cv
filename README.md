@@ -45,4 +45,6 @@ MIT
 
 ## Contact
 
-`xovee at live.com`
+Have any suggestions or encountered any problems? Feel free to contact me at
+
+`xovee.xu at gmail.com`
