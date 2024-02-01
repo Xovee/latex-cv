@@ -1,9 +1,9 @@
 % LaTeX Curriculum Vitae
 % Author: Xovee Xu (https://xovee.cn)
-% Last Update: July 28, 2020
+% Last Update: Feb 1, 2024
 % Latest Version (consider give me a star!): https://github.com/Xovee/latex-cv
 % Overleaf Link: https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf
-% Current Version: v0.95
+% Current Version: v0.96
 % LICENSE: MIT
 
 
@@ -21,6 +21,7 @@
 \usepackage{url}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{amsmath}
+\usepackage{eqparbox}
 
 % package settings
 \usepackage[
@@ -28,6 +29,7 @@
     pdfnewwindow=true,
     pdfauthor={Xovee Xu},
     pdftitle={Curriculum Vitae of Xovee Xu},
+    pdfpagemode=UseThumbs,
 ]{hyperref}
 
 \pagestyle{headings}
@@ -40,6 +42,7 @@
 % define cv section
 \newcommand{\cvsection}[1]{\section*{\rmfamily#1}}
 \newcommand{\cvsubsection}[1]{\subsection*{\rmfamily\hspace{1.6em}#1}}
+\newcommand{\HL}[1]{\textbf{\color{red}#1}}
 
 % begin
 \begin{document}
@@ -62,7 +65,7 @@
 
 \noindent University of Electronic Science and Technology of China (UESTC)\hfill \href{mailto:xovee@std.uestc.edu.cn}{\texttt{xovee@std.uestc.edu.cn}}
 
-\noindent Chengdu, Sichuan 610054, China\hfill \url{https://xovee.cn}
+\noindent Chengdu, Sichuan 610054, China\hfill \url{https://www.xoveexu.com}
 
 
 \setlength{\parskip}{3pt}
@@ -83,22 +86,37 @@
 
 \textbf{University of Electronic Science and Technology of China (UESTC)}, Chengdu, China
 
-\hspace{2em}Ph.D. Student, Computer Science, 2021 to 2025 (expc.)
+\hspace{2em}Ph.D, Computer Science, 2025
 
-\hspace{2em}M.S., Software Engineering, 2021
+\hspace{2em}Dissertation: How to write innovative \LaTeX~articles. Advisor: Issac Newton.
 
-\hspace{2em}B.S., Software Engineering, 2018
+\textbf{University of LaTeX}, Chengdu, China
+
+\hspace{2em}B.A. Hons, Software Engineering, 2018
+
+\hspace{2em}GPA: 4.01/4, or anything you want
 
 
 % below is another kind of style
 \cvsection{Education (Another Style)}
 \indent 
 
-Ph.D., Computer Science, University of Electronic Science and Technology of China, 2021 to 2025 (expc.)
+Ph.D., Computer Science, University of Electronic Science and Technology of China, 2025
 
 M.S., Software Engineering, University of Electronic Science and Technology of China, 2021
 
 B.S., Software Engineering, University of Electronic Science and Technology of China, 2018
+
+
+% below is another kind of style
+\cvsection{Education (Another Style)}
+\indent 
+
+\eqparbox[t]{program}{Ph.D.} \hfill \eqparbox{major}{Computer Science} \hfill \eqparbox{edu-univ}{University of Electronic Science and Technology of China} \hfill \eqparbox{edu-year}{2025}
+
+\eqparbox[t]{program}{M.S.} \hfill \eqparbox{major}{Software Engineering} \hfill \eqparbox{edu-univ}{University of Electronic Science and Technology of China} \hfill \eqparbox{edu-year}{2021}
+
+\eqparbox[t]{program}{B.S.} \hfill \eqparbox{major}{Software Engineering} \hfill \eqparbox{edu-univ}{University of Electronic Science and Technology of China} \hfill \eqparbox{edu-year}{2018}
 
 
 % academic employment
@@ -142,7 +160,7 @@ Postdoc, University of Electronic Science and Technology of China, Chengdu, Chin
 
 A.M. Turing Award, ACM, 2077
 
-Excellent Master Thesis, 105/4929, UESTC, 2021
+Excellent Master Thesis, UESTC, 2021
 
 
 % academic service
@@ -160,7 +178,7 @@ Journal of \LaTeX, 2066 - 2077
 
 International Conference on How to Write CV, 2077
 
-\cvsubsection{Ad Hoc Reviewer}
+\cvsubsection{Program Committee Member}
 \indent
 
 IEEE Transactions on Knowledge and Data Engineering (TKDE)
@@ -173,6 +191,10 @@ IEEE/ACM Transaction on Network (TON)
 Association for Computing Machinery (ACM)
 
 \hspace{2em}Fellow (2080), Senior Member (2077), Member (2020)
+
+Institute of Electrical and Electronics Engineers (IEEE)
+
+\hspace{2em}Member (2020)
 
 
 

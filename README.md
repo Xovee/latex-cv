@@ -37,7 +37,7 @@ If you want to use `bibtex` or other similar packages, create your bibliography 
 
 ## Useful Resource
 
-- [Academic Job Search - CV (from UC Berkeley)](https://career.berkeley.edu/PhDs/PhDCV)
+- [Academic Job Search - CV (from UC Berkeley)](https://career.berkeley.edu/grad-students-postdocs/academic-job-search/the-cv-part-1-overview/)
 
 ## LICENSE
 
