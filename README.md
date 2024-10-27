@@ -5,9 +5,9 @@
 
 This repo provides a CV template designed by [Xovee Xu](https://www.xoveexu.com).
 
-- If you like this template, consider give me a star!
+- If you like this template, consider give me a **star**:star:!
 
-- If you have any suggestions, contact me at `xovee at live.com`
+- If you have any suggestions, contact me at `xovee.xu at gmail.com`
 
 - See a sample below. You can have a look at my personal academic CV [here](https://www.xoveexu.com/cv/cv.pdf).
 
