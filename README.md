@@ -9,7 +9,7 @@ This repo provides a CV template designed by [Xovee Xu](https://www.xoveexu.com)
 
 - If you have any suggestions, contact me at `xovee.xu at gmail.com`
 
-- See a sample below. You can have a look at my personal academic CV [here](https://www.xoveexu.com/cv/cv.pdf).
+- See a sample below. You can have a look at my personal academic CV [here](https://www.xoveexu.com/cv.pdf).
 
 ![CV Example](example.png)
 
