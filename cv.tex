@@ -1,6 +1,6 @@
 % LaTeX Curriculum Vitae
 % Author: Xovee Xu (https://www.xoveexu.com)
-% Last Update: Feb 1, 2024
+% Last Update: Dec 29, 2025
 % Latest Version (consider give me a star!): https://github.com/Xovee/latex-cv
 % Overleaf Link: https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf
 % Current Version: v0.96
@@ -17,10 +17,12 @@
 \usepackage[T1]{fontenc}
 
 \usepackage{enumitem}
-\usepackage[a4paper,left=.9in, right=.9in, top=1.5in, bottom=1.5in]{geometry}
+\setlist[enumerate,1]{leftmargin=2em}
+\usepackage[a4paper,left=1in, right=1in, top=1in, bottom=1in]{geometry} % or use letterpaper
 \usepackage{url}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{amsmath}
+\usepackage{indentfirst}
 \usepackage{eqparbox}
 
 % package settings
@@ -32,10 +34,27 @@
     pdfpagemode=UseThumbs,
 ]{hyperref}
 
+% if you want to use some Chinese characters -- uncomment below
+% \usepackage{CJKutf8}
+% \newcommand{\chinese}[1]{%
+%   {\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}%
+% }
+
 \pagestyle{headings}
 \markright{\textbf{Your Name}}
 
 \setlength\parindent{2em}
+
+% text box for left alignment text/number
+\newcommand{\stb}[2][4em]{%
+    \makebox[#1][l]{#2}%
+}
+\newcommand{\mtb}[2][7em]{%
+    \makebox[#1][l]{#2}%
+}
+\newcommand{\ltb}[2][10em]{%
+    \makebox[#1][l]{#2}%
+}
 
 \thispagestyle{empty}
 
@@ -55,34 +74,28 @@
 \end{center}
 \vspace{20pt}
 
-
-\setlength{\parskip}{1pt}
-\renewcommand{\arraystretch}{1.25}
+\setlength{\parskip}{3pt}
 
 % Contact Information
+% list whatever you want here
+\noindent Associate Professor in Computer Science \hfill 0000-0000-0000-0000
 
 \noindent School of Computer Science and Engineering \hfill (+86) 123-456-789
 
-\noindent University of Electronic Science and Technology of China (UESTC)\hfill \href{mailto:xovee@std.uestc.edu.cn}{\texttt{xovee@std.uestc.edu.cn}}
+\noindent University of Electronic Science and Technology of China (UESTC)\hfill \href{mailto:xovee@uestc.edu.cn}{\texttt{xovee@uestc.edu.cn}}
 
 \noindent Chengdu, Sichuan 610054, China\hfill \url{https://www.xoveexu.com}
 
 
-\setlength{\parskip}{3pt}
-
-
-
-
 % Summary / Statement
 \cvsection{Summary / Statement}
-\indent
 
 \hangindent=2emI have rich experience and strong skills in ... I want ...
 
 
 % Education
 \cvsection{Education}
-\indent 
+% bold the most important information that you want to highlight -- show them first
 
 \textbf{University of Electronic Science and Technology of China (UESTC)}, Chengdu, China
 
@@ -99,7 +112,6 @@
 
 % below is another kind of style
 \cvsection{Education (Another Style)}
-\indent 
 
 Ph.D., Computer Science, University of Electronic Science and Technology of China, 2025
 
@@ -110,18 +122,31 @@ B.S., Software Engineering, University of Electronic Science and Technology of C
 
 % below is another kind of style
 \cvsection{Education (Another Style)}
-\indent 
 
-\eqparbox[t]{program}{Ph.D.} \hfill \eqparbox{major}{Computer Science} \hfill \eqparbox{edu-univ}{University of Electronic Science and Technology of China} \hfill \eqparbox{edu-year}{2025}
+\eqparbox[t]{program}{Ph.D.} \hfill \eqparbox{major}{Computer Science} \hfill \eqparbox{edu-univ}{UESTC, Chengdu, China} \hfill \eqparbox{edu-year}{2025}
 
-\eqparbox[t]{program}{M.S.} \hfill \eqparbox{major}{Software Engineering} \hfill \eqparbox{edu-univ}{University of Electronic Science and Technology of China} \hfill \eqparbox{edu-year}{2021}
+\eqparbox[t]{program}{M.S.} \hfill \eqparbox{major}{Software Engineering} \hfill \eqparbox{edu-univ}{UESTC, Chengdu, China} \hfill \eqparbox{edu-year}{2021}
 
-\eqparbox[t]{program}{B.S.} \hfill \eqparbox{major}{Software Engineering} \hfill \eqparbox{edu-univ}{University of Electronic Science and Technology of China} \hfill \eqparbox{edu-year}{2018}
+\eqparbox[t]{program}{B.S.} \hfill \eqparbox{major}{Software Engineering} \hfill \eqparbox{edu-univ}{UESTC, Chengdu, China} \hfill \eqparbox{edu-year}{2018}
 
+\cvsection{Education (Another Style)}
+
+% use \stb[]{} to control the space
+
+\stb[5em]{Ph.D.} \stb[11em]{Computer Science} \stb[14em]{UESTC, Chengdu, China} \hfill 2025
+
+\stb[5em]{M.S.} \stb[11em]{Software Engineering} \stb[14em]{UESTC, Chengdu, China} \hfill 2021
+
+\stb[5em]{B.S.} \stb[11em]{Software Engineering} \stb[14em]{UESTC, Chengdu, China} \hfill 2018
+
+\vspace{5pt}
+
+There are many styles, choose the one you like!
 
 % academic employment
 \cvsection{Academic Employment}
-\indent
+
+Similar to the Education section. 
 
 \textbf{Standard University}, CA, USA
 
@@ -139,7 +164,6 @@ B.S., Software Engineering, University of Electronic Science and Technology of C
 
 
 \cvsection{Academic Employment (Another Style)}
-\indent
 
 Dean, Dept. of Computer Science, Standard University, CA, USA, 2080 -
 
@@ -152,11 +176,8 @@ Assistant Professor, Standard University, CA, USA, 2060 - 2066
 Postdoc, University of Electronic Science and Technology of China, Chengdu, China, 2059 - 2060
 
 
-
-
 % distinction, award, honor, and fellowship
 \cvsection{Distinction}
-\indent
 
 A.M. Turing Award, ACM, 2077
 
@@ -167,32 +188,28 @@ Excellent Master Thesis, UESTC, 2021
 \cvsection{Academic Service}
 
 \cvsubsection{Editor-in-Chief}
-\indent
 
 Journal of Curriculum Vitae, 2077 -
 
 Journal of \LaTeX, 2066 - 2077
 
 \cvsubsection{General Chair}
-\indent
 
 International Conference on How to Write CV, 2077
 
 \cvsubsection{Program Committee Member}
-\indent
 
 IEEE Transactions on Knowledge and Data Engineering (TKDE)
 
 IEEE/ACM Transaction on Network (TON)
 
 \cvsubsection{Professional Membership}
-\indent
 
-Association for Computing Machinery (ACM)
+\textbf{ACM}: Association for Computing Machinery
 
 \hspace{2em}Fellow (2080), Senior Member (2077), Member (2020)
 
-Institute of Electrical and Electronics Engineers (IEEE)
+\textbf{IEEE}: Institute of Electrical and Electronics Engineers
 
 \hspace{2em}Member (2020)
 
@@ -207,7 +224,6 @@ Institute of Electrical and Electronics Engineers (IEEE)
 
 % talks
 \cvsection{Invited Talk}
-\indent 
 
 University of CV, Dept. of Linguistics, 2077 
 
@@ -215,7 +231,6 @@ University of CV, Dept. of Linguistics, 2077
 
 % teaching experience 
 \cvsection{Teaching Experience}
-\indent
 
 \textbf{C Programming Language}\hfill Spring 2020
 
@@ -224,7 +239,6 @@ University of CV, Dept. of Linguistics, 2077
 \textbf{Software Project Management}\hfill Summer 2019
 
 \hspace{2em}Teaching Assistant, with Prof. Gianmario Motta (University of Pavia), at UESTC
-
 
 
 
@@ -254,7 +268,6 @@ University of CV, Dept. of Linguistics, 2077
 
 % language
 \cvsection{Language}
-\indent
 
 Native Chinese (Mandarin \& Northern Shaanxi Dialect)
 
@@ -262,24 +275,24 @@ Fluent English
 
 
 
-
 % reference 
 \cvsection{Reference}
-\indent
 
 \textbf{Dr. John Smith}, Professor and Chair, Dept. of Curriculum Vitae, University of Standard
 
-\hspace{2em}(+86) 181-xxxx-xxxx \hspace{2em} \url{xovee@ieee.org}
+\hspace{2em}(+86) 181-xxxx-xxxx \hspace{2em} \url{xovee@live.com}
 
 
 % other things
 \cvsection{Any Other Sections}
-\indent 
 
 Wow! A lengthy CV!
 
 
 \vfill
+
+\noindent
+\LaTeX~CV Template: \url{https://github.com/Xovee/latex-cv}
 
 \section*{\hfill\color{OliveGreen}\today}
 
