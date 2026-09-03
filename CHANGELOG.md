@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 - 2026-09-03
+
+- Made the template authorship explicit in the default final-page footer.
+- Added `\cvhidecredit` and `\cvshowcredit` for submission contexts that require unbranded output.
+- Documented attribution and redistribution guidance in the README.
+
 ## 1.0.0 - 2026-09-03
 
 - Rebuilt the template around four semantic record families.

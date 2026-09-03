@@ -7,6 +7,8 @@ A calm, semantic, and maintainable LaTeX template for an academic curriculum vit
 
 All CV records in the example are fictional placeholders. The template contains no personal information other than the author's attribution and project links.
 
+Created and maintained by [Xovee Xu](https://www.xoveexu.com). The example keeps a small, linked attribution in the final-page footer so copies remain traceable to the original project. Users who need an unbranded document for an employer, institution, or application system can add `\cvhidecredit` in `cv.tex`.
+
 ![Rendered first page of the template](example.png)
 
 ## Quick start
@@ -39,6 +41,10 @@ The generated file is `cv.pdf`.
 | `example.png` | First-page preview used in this README |
 
 Keeping presentation rules in `xovee-cv.sty` makes global changes predictable. Ordinary CV updates should normally touch only `cv.tex` and `content.tex`.
+
+## Attribution
+
+The source header, README, repository metadata, and default final-page footer identify this as **Xovee's CV Template by Xovee Xu**. When redistributing the template or a substantial modified version, keep the MIT license and a clear link to the original project. The rendered footer is intentionally optional because some CV submission contexts require unbranded output.
 
 ## Design system
 

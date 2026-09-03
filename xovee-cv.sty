@@ -1,6 +1,6 @@
 % Reusable layout for Xovee's CV Template.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{xovee-cv}[2026/09/03 v1.0.0 semantic academic CV layout]
+\ProvidesPackage{xovee-cv}[2026/09/03 v1.0.1 semantic academic CV layout]
 
 \RequirePackage{libertinus}
 \RequirePackage{enumitem}
@@ -19,6 +19,13 @@
 \newcommand{\cvname}[1]{\renewcommand{\CVName}{#1}}
 \newcommand{\cvdocumenttitle}[1]{\renewcommand{\CVDocumentTitle}{#1}}
 \newcommand{\cvlastupdated}[1]{\renewcommand{\CVLastUpdated}{#1}}
+
+% Template attribution. Keep it visible by default while allowing an unbranded
+% document when an employer, institution, or application system requires one.
+\newif\ifCVShowTemplateCredit
+\CVShowTemplateCredittrue
+\newcommand{\cvshowcredit}{\CVShowTemplateCredittrue}
+\newcommand{\cvhidecredit}{\CVShowTemplateCreditfalse}
 
 \hypersetup{
     hidelinks,
@@ -173,7 +180,9 @@
     \vspace{1cm}%
     \vfill
     \noindent
-    \LaTeX~CV Template: \url{https://github.com/Xovee/latex-cv}%
+    \ifCVShowTemplateCredit
+        \href{https://github.com/Xovee/latex-cv}{Xovee's CV Template by Xovee Xu}%
+    \fi
     \hfill
     \textbf{\color{OliveGreen}\CVLastUpdated}%
 }
