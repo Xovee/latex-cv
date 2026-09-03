@@ -1,0 +1,34 @@
+name: Compile
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  latex:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: pdfLaTeX
+            args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+          - name: XeLaTeX
+            args: -xelatex -file-line-error -halt-on-error -interaction=nonstopmode
+          - name: LuaLaTeX
+            args: -lualatex -file-line-error -halt-on-error -interaction=nonstopmode
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Compile cv.tex
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: cv.tex
+          args: ${{ matrix.args }}

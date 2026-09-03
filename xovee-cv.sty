@@ -1,0 +1,181 @@
+% Reusable layout for Xovee's CV Template.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{xovee-cv}[2026/09/03 v1.0.0 semantic academic CV layout]
+
+\RequirePackage{libertinus}
+\RequirePackage{enumitem}
+\RequirePackage{tabularx}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{xurl}
+\RequirePackage[margin=1in]{geometry}
+\RequirePackage{hyperref}
+
+\urlstyle{same}
+
+% Identity and document metadata.
+\newcommand{\CVName}{Candidate Name}
+\newcommand{\CVDocumentTitle}{Curriculum Vitae}
+\newcommand{\CVLastUpdated}{\today}
+\newcommand{\cvname}[1]{\renewcommand{\CVName}{#1}}
+\newcommand{\cvdocumenttitle}[1]{\renewcommand{\CVDocumentTitle}{#1}}
+\newcommand{\cvlastupdated}[1]{\renewcommand{\CVLastUpdated}{#1}}
+
+\hypersetup{
+    hidelinks,
+    pdfnewwindow=true,
+    pdfpagemode=UseThumbs
+}
+
+\AtBeginDocument{%
+    \hypersetup{
+        pdfauthor={\CVName},
+        pdftitle={\CVDocumentTitle\ of \CVName}
+    }%
+    \pagestyle{headings}%
+    \markright{\rmfamily\textbf{\CVName}}%
+    \setlength{\parindent}{2em}%
+    \setlength{\parskip}{3pt}%
+}
+
+% Identity block.
+\newcommand{\makecvheader}{%
+    \thispagestyle{empty}%
+    \begin{center}
+        \Huge{\rmfamily\textbf{\CVName}}
+    \end{center}
+    \vspace{20pt}%
+}
+\newcommand{\cvcontactrow}[2]{%
+    \noindent #1\hfill #2\par
+}
+
+% Visible hierarchy.
+\newcommand{\cvsection}[1]{\section*{\rmfamily#1}}
+\newcommand{\cvsubsection}[1]{\subsection*{\rmfamily\hspace{1.6em}#1}}
+
+% Compact lists and citation lists.
+\setlist[enumerate,1]{leftmargin=2em,itemsep=0.35em}
+\newenvironment{cvcompactlist}{%
+    \begin{itemize}[leftmargin=2em,itemsep=0pt,parsep=0pt,topsep=0.25em]%
+}{%
+    \end{itemize}%
+}
+
+% Compact label-value registers.
+\newenvironment{cvregister}[1][2em]{%
+    \begin{itemize}[
+        leftmargin=#1,
+        label={},
+        itemsep=0pt,
+        parsep=0pt,
+        topsep=0.25em
+    ]%
+}{%
+    \end{itemize}%
+}
+
+% Shared spacing for subject-led multi-line records.
+\newenvironment{cvrecordlist}[1][2em]{%
+    \begin{itemize}[
+        leftmargin=#1,
+        label={},
+        itemsep=0.75em,
+        parsep=0.25em,
+        topsep=0.35em
+    ]%
+}{%
+    \end{itemize}%
+}
+
+% Chronology-led records with a fixed year column.
+\newenvironment{cvchronologylist}{%
+    \begin{itemize}[
+        leftmargin=5em,
+        labelsep=1em,
+        itemsep=0.75em,
+        parsep=0.25em,
+        topsep=0.35em
+    ]%
+}{%
+    \end{itemize}%
+}
+
+% Subject-led dated records.
+\newlength{\cvdateditemindent}
+\setlength{\cvdateditemindent}{2em}
+\newcommand{\cvdatedline}[2]{%
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}Xr@{}}
+        #1 & #2
+    \end{tabularx}%
+}
+\newcommand{\cvdaterow}[2]{%
+    \item \cvdatedline{#1}{#2}%
+}
+\newcommand{\cvdateditem}[3]{%
+    \item
+    \cvdatedline{#1}{#2}%
+    \par
+    \begingroup
+    \setlength{\leftskip}{\cvdateditemindent}%
+    \setlength{\parindent}{0pt}%
+    #3\par
+    \endgroup
+}
+\newcommand{\cvundateditem}[2]{%
+    \item #1\par
+    \begingroup
+    \setlength{\leftskip}{\cvdateditemindent}%
+    \setlength{\parindent}{0pt}%
+    #2\par
+    \endgroup
+}
+
+% Specialized chronology-led records.
+\newcommand{\cvtalkitem}[3]{%
+    \item[#1] #2\par #3%
+}
+\newcommand{\cvfundingitem}[5]{%
+    \item[#1] \textit{#2}.\par
+    #3\par
+    #4\par
+    \if\relax\detokenize{#5}\relax\else#5\par\fi
+}
+
+% Registers, memberships, and summaries.
+\newcommand{\cvlabel}[2][7em]{%
+    \makebox[#1][l]{#2}%
+}
+\newcommand{\cvregisterrow}[3][7em]{%
+    \item \cvlabel[#1]{#2} #3%
+}
+\newcommand{\cvmembershipitem}[3]{%
+    \item
+    \cvlabel[4em]{\textbf{#1}} #2\par
+    \cvlabel[4em]{} #3%
+}
+\newcommand{\cvvenuesummaryitem}[2]{%
+    \hangindent=4.27em
+    \cvlabel[2em]{#1} #2\par
+}
+
+% Publication helpers.
+\newcommand{\cvdistinction}[1]{\textbf{\color{red}#1}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{\nolinkurl{doi:#1}}}
+\newcommand{\equalcontrib}{\textsuperscript{\ensuremath{\dagger}}}
+\newcommand{\corresponding}{\textsuperscript{*}}
+\newcommand{\cvpublicationlegend}{%
+    \noindent\hfill
+    \equalcontrib\ Equal Contribution, \corresponding\ Corresponding Author\par
+}
+
+% Isolated template credit at the bottom of the final page.
+\newcommand{\makecvfooter}{%
+    \vspace{1cm}%
+    \vfill
+    \noindent
+    \LaTeX~CV Template: \url{https://github.com/Xovee/latex-cv}%
+    \hfill
+    \textbf{\color{OliveGreen}\CVLastUpdated}%
+}
+
+\endinput

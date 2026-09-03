@@ -1,299 +1,33 @@
-% LaTeX Curriculum Vitae
+% Xovee's CV Template
 % Author: Xovee Xu (https://www.xoveexu.com)
-% Last Update: Dec 29, 2025
-% Latest Version (consider give me a star!): https://github.com/Xovee/latex-cv
-% Overleaf Link: https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf
-% Current Version: v0.96
-% LICENSE: MIT
+% Version: 1.0.0 (September 2026)
+% Source: https://github.com/Xovee/latex-cv
+% Overleaf: https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf
+% License: MIT
 
+\documentclass[a4paper,10pt]{article}
 
-\documentclass{article}
+% All layout rules and reusable record commands live in one place.
+\usepackage{xovee-cv}
 
-\usepackage[utf8]{inputenc}
-\usepackage[full]{textcomp}
-\usepackage{CJKutf8}
-\usepackage[lf]{ebgaramond}
-% \usepackage[scaled,swashQ]{garamondx}
-\usepackage[T1]{fontenc}
+% Edit the identity values once; they are reused in the header and PDF metadata.
+\cvname{Candidate Name}
+\cvdocumenttitle{Curriculum Vitae}
+\cvlastupdated{September 2026}
 
-\usepackage{enumitem}
-\setlist[enumerate,1]{leftmargin=2em}
-\usepackage[a4paper,left=1in, right=1in, top=1in, bottom=1in]{geometry} % or use letterpaper
-\usepackage{url}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{amsmath}
-\usepackage{indentfirst}
-\usepackage{eqparbox}
-
-% package settings
-\usepackage[
-    hidelinks,
-    pdfnewwindow=true,
-    pdfauthor={Xovee Xu},
-    pdftitle={Curriculum Vitae of Xovee Xu},
-    pdfpagemode=UseThumbs,
-]{hyperref}
-
-% if you want to use some Chinese characters -- uncomment below
-% \usepackage{CJKutf8}
-% \newcommand{\chinese}[1]{%
-%   {\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}%
-% }
-
-\pagestyle{headings}
-\markright{\textbf{Your Name}}
-
-\setlength\parindent{2em}
-
-% text box for left alignment text/number
-\newcommand{\stb}[2][4em]{%
-    \makebox[#1][l]{#2}%
-}
-\newcommand{\mtb}[2][7em]{%
-    \makebox[#1][l]{#2}%
-}
-\newcommand{\ltb}[2][10em]{%
-    \makebox[#1][l]{#2}%
-}
-
-\thispagestyle{empty}
-
-% define cv section
-\newcommand{\cvsection}[1]{\section*{\rmfamily#1}}
-\newcommand{\cvsubsection}[1]{\subsection*{\rmfamily\hspace{1.6em}#1}}
-\newcommand{\HL}[1]{\textbf{\color{red}#1}}
-
-% begin
 \begin{document}
 
-% name
-\begin{center}
-    \Huge{
-    \rmfamily
-    \textbf{Your Name}}
-\end{center}
-\vspace{20pt}
+\makecvheader
 
-\setlength{\parskip}{3pt}
+% Keep the identity block short. Add, remove, or reorder rows as needed.
+\cvcontactrow{Academic Position}{ORCID: 0000-0000-0000-0000}
+\cvcontactrow{Department of Computer Science}{\href{mailto:name@example.edu}{name@example.edu}}
+\cvcontactrow{Example University}{\url{https://example.edu/name}}
+\cvcontactrow{City, Country}{}
 
-% Contact Information
-% list whatever you want here
-\noindent Associate Professor in Computer Science \hfill 0000-0000-0000-0000
+% All records below are fictional placeholders. Replace them with verified content.
+\input{content}
 
-\noindent School of Computer Science and Engineering \hfill (+86) 123-456-789
-
-\noindent University of Electronic Science and Technology of China (UESTC)\hfill \href{mailto:xovee@uestc.edu.cn}{\texttt{xovee@uestc.edu.cn}}
-
-\noindent Chengdu, Sichuan 610054, China\hfill \url{https://www.xoveexu.com}
-
-
-% Summary / Statement
-\cvsection{Summary / Statement}
-
-\hangindent=2emI have rich experience and strong skills in ... I want ...
-
-
-% Education
-\cvsection{Education}
-% bold the most important information that you want to highlight -- show them first
-
-\textbf{University of Electronic Science and Technology of China (UESTC)}, Chengdu, China
-
-\hspace{2em}Ph.D, Computer Science, 2025
-
-\hspace{2em}Dissertation: How to write innovative \LaTeX~articles. Advisor: Issac Newton.
-
-\textbf{University of LaTeX}, Chengdu, China
-
-\hspace{2em}B.A. Hons, Software Engineering, 2018
-
-\hspace{2em}GPA: 4.01/4, or anything you want
-
-
-% below is another kind of style
-\cvsection{Education (Another Style)}
-
-Ph.D., Computer Science, University of Electronic Science and Technology of China, 2025
-
-M.S., Software Engineering, University of Electronic Science and Technology of China, 2021
-
-B.S., Software Engineering, University of Electronic Science and Technology of China, 2018
-
-
-% below is another kind of style
-\cvsection{Education (Another Style)}
-
-\eqparbox[t]{program}{Ph.D.} \hfill \eqparbox{major}{Computer Science} \hfill \eqparbox{edu-univ}{UESTC, Chengdu, China} \hfill \eqparbox{edu-year}{2025}
-
-\eqparbox[t]{program}{M.S.} \hfill \eqparbox{major}{Software Engineering} \hfill \eqparbox{edu-univ}{UESTC, Chengdu, China} \hfill \eqparbox{edu-year}{2021}
-
-\eqparbox[t]{program}{B.S.} \hfill \eqparbox{major}{Software Engineering} \hfill \eqparbox{edu-univ}{UESTC, Chengdu, China} \hfill \eqparbox{edu-year}{2018}
-
-\cvsection{Education (Another Style)}
-
-% use \stb[]{} to control the space
-
-\stb[5em]{Ph.D.} \stb[11em]{Computer Science} \stb[14em]{UESTC, Chengdu, China} \hfill 2025
-
-\stb[5em]{M.S.} \stb[11em]{Software Engineering} \stb[14em]{UESTC, Chengdu, China} \hfill 2021
-
-\stb[5em]{B.S.} \stb[11em]{Software Engineering} \stb[14em]{UESTC, Chengdu, China} \hfill 2018
-
-\vspace{5pt}
-
-There are many styles, choose the one you like!
-
-% academic employment
-\cvsection{Academic Employment}
-
-Similar to the Education section. 
-
-\textbf{Standard University}, CA, USA
-
-\hspace{2em}Dean, Dept. of Computer Science, 2080 - 
-
-\hspace{2em}Professor, 2077 - 
-
-\hspace{2em}Associate Professor, 2066 - 2077
-
-\hspace{2em}Assistant Professor, 2060 - 2066
-
-\textbf{University of Electronic Science and Technology of China (UESTC)}, Chengdu, China
-
-\hspace{2em}Postdoc, 2059 - 2060
-
-
-\cvsection{Academic Employment (Another Style)}
-
-Dean, Dept. of Computer Science, Standard University, CA, USA, 2080 -
-
-Professor, Standard University, CA, USA, 2077 -
-
-Associated Professor, Standard University, CA, USA, 2066 - 2077
-
-Assistant Professor, Standard University, CA, USA, 2060 - 2066
-
-Postdoc, University of Electronic Science and Technology of China, Chengdu, China, 2059 - 2060
-
-
-% distinction, award, honor, and fellowship
-\cvsection{Distinction}
-
-A.M. Turing Award, ACM, 2077
-
-Excellent Master Thesis, UESTC, 2021
-
-
-% academic service
-\cvsection{Academic Service}
-
-\cvsubsection{Editor-in-Chief}
-
-Journal of Curriculum Vitae, 2077 -
-
-Journal of \LaTeX, 2066 - 2077
-
-\cvsubsection{General Chair}
-
-International Conference on How to Write CV, 2077
-
-\cvsubsection{Program Committee Member}
-
-IEEE Transactions on Knowledge and Data Engineering (TKDE)
-
-IEEE/ACM Transaction on Network (TON)
-
-\cvsubsection{Professional Membership}
-
-\textbf{ACM}: Association for Computing Machinery
-
-\hspace{2em}Fellow (2080), Senior Member (2077), Member (2020)
-
-\textbf{IEEE}: Institute of Electrical and Electronics Engineers
-
-\hspace{2em}Member (2020)
-
-
-
-
-% publication
-\input{article.tex}
-
-
-
-
-% talks
-\cvsection{Invited Talk}
-
-University of CV, Dept. of Linguistics, 2077 
-
-
-
-% teaching experience 
-\cvsection{Teaching Experience}
-
-\textbf{C Programming Language}\hfill Spring 2020
-
-\hspace{2em}Teaching Assistant, with Prof. Ting Zhong, at UESTC
-
-\textbf{Software Project Management}\hfill Summer 2019
-
-\hspace{2em}Teaching Assistant, with Prof. Gianmario Motta (University of Pavia), at UESTC
-
-
-
-% industrial experience
-% \section*{Industrial Experience}
-% \indent
-
-% \textbf{Strawberry Inc.}, Beijing, China
-
-% \hspace{2em}Co-funder, 2077 - 
-
-% \textbf{Delicious Mango Holdings Ltd.}, London, UK
-
-% \hspace{2em}\LaTeX~Engineer Intern, 2076 - 2077
-
-% \textbf{CV Agency Co. Ltd.}, Hawaii, USA
-
-% \hspace{2em}CV Broker, 2075 - 2076
-% \begin{itemize}[leftmargin=5em, topsep=0pt, itemsep=0pt]
-%     \item Helped a three-year old child create her first CV
-%     \item Hilight 2 ...
-%     \item Hilight 3 ...
-% \end{itemize}
-
-
-
-
-% language
-\cvsection{Language}
-
-Native Chinese (Mandarin \& Northern Shaanxi Dialect)
-
-Fluent English
-
-
-
-% reference 
-\cvsection{Reference}
-
-\textbf{Dr. John Smith}, Professor and Chair, Dept. of Curriculum Vitae, University of Standard
-
-\hspace{2em}(+86) 181-xxxx-xxxx \hspace{2em} \url{xovee@live.com}
-
-
-% other things
-\cvsection{Any Other Sections}
-
-Wow! A lengthy CV!
-
-
-\vfill
-
-\noindent
-\LaTeX~CV Template: \url{https://github.com/Xovee/latex-cv}
-
-\section*{\hfill\color{OliveGreen}\today}
+\makecvfooter
 
 \end{document}
