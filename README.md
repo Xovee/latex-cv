@@ -44,7 +44,7 @@ Keeping presentation rules in `xovee-cv.sty` makes global changes predictable. O
 
 ## Attribution
 
-The source header, README, repository metadata, and default final-page footer identify this as **Xovee's CV Template by Xovee Xu**. When redistributing the template or a substantial modified version, keep the MIT license and a clear link to the original project. The rendered footer is intentionally optional because some CV submission contexts require unbranded output.
+The source header, README, repository metadata, and default final-page footer identify this as **LaTeX CV Template by Xovee Xu** and link to the original project. When redistributing the template or a substantial modified version, keep the MIT license and a clear link to the original project. The rendered footer is intentionally optional because some CV submission contexts require unbranded output.
 
 ## Design system
 

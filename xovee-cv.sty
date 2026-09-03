@@ -1,6 +1,6 @@
 % Reusable layout for Xovee's CV Template.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{xovee-cv}[2026/09/03 v1.0.1 semantic academic CV layout]
+\ProvidesPackage{xovee-cv}[2026/09/03 v1.0.2 semantic academic CV layout]
 
 \RequirePackage{libertinus}
 \RequirePackage{enumitem}
@@ -181,10 +181,15 @@
     \vfill
     \noindent
     \ifCVShowTemplateCredit
-        \href{https://github.com/Xovee/latex-cv}{Xovee's CV Template by Xovee Xu}%
+        \begin{minipage}[b]{0.68\linewidth}
+            \small LaTeX CV Template by Xovee Xu\par
+            \footnotesize\href{https://github.com/Xovee/latex-cv}{\nolinkurl{github.com/Xovee/latex-cv}}
+        \end{minipage}%
     \fi
     \hfill
-    \textbf{\color{OliveGreen}\CVLastUpdated}%
+    \begin{minipage}[b]{0.28\linewidth}
+        \raggedleft\textbf{\color{OliveGreen}\CVLastUpdated}
+    \end{minipage}%
 }
 
 \endinput

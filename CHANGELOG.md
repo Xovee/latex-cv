@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 - 2026-09-03
+
+- Refined the final-page credit to show “LaTeX CV Template by Xovee Xu” with the project URL on a separate line.
+
 ## 1.0.1 - 2026-09-03
 
 - Made the template authorship explicit in the default final-page footer.
