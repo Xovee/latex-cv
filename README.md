@@ -3,13 +3,15 @@
 [![Compile](https://github.com/Xovee/latex-cv/actions/workflows/compile.yml/badge.svg)](https://github.com/Xovee/latex-cv/actions/workflows/compile.yml)
 [![Open in Overleaf](https://img.shields.io/badge/Overleaf-Open_as_Template-138A07?logo=overleaf)](https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf)
 
-A calm, semantic, and maintainable LaTeX template for an academic curriculum vitae. The layout is deliberately restrained: clear hierarchy, consistent alignment, compact typography, and natural page flow.
+A clean, carefully structured LaTeX template for your academic CV. Easy to read, easy to update, and designed to grow with your work.
 
-All CV records in the example are fictional placeholders. The template contains no personal information other than the author's attribution and project links.
+Designed and maintained by [Xovee Xu](https://www.xoveexu.com).
 
-Created and maintained by [Xovee Xu](https://www.xoveexu.com). The example keeps a small, linked attribution in the final-page footer so copies remain traceable to the original project. Users who need an unbranded document for an employer, institution, or application system can add `\cvhidecredit` in `cv.tex`.
-
-![Rendered first page of the template](example.png)
+<p align="center">
+  <a href="cv.pdf">
+    <img src="example.png" width="600" alt="First-page preview of Xovee's CV Template. Click to view the complete PDF.">
+  </a>
+</p>
 
 ## Quick start
 
@@ -17,18 +19,11 @@ Created and maintained by [Xovee Xu](https://www.xoveexu.com). The example keeps
 
 Open the [published Overleaf template](https://www.overleaf.com/latex/templates/xovees-cv-template/rrsmqwhbygcf), select **Open as Template**, and edit the copy in your account.
 
+The latest version is available on [GitHub](https://github.com/Xovee/latex-cv).
+
 ### Local LaTeX
 
-1. Clone or download this repository.
-2. Edit the identity values and contact rows in `cv.tex`.
-3. Replace the fictional records in `content.tex` with verified content.
-4. Compile from the repository root:
-
-   ```text
-   latexmk -pdf -interaction=nonstopmode -halt-on-error cv.tex
-   ```
-
-The generated file is `cv.pdf`.
+Clone or download this repository and customize the template with your own information and content.
 
 ## File structure
 
@@ -38,81 +33,55 @@ The generated file is `cv.pdf`.
 | `content.tex` | Fictional sample records to replace with your own content |
 | `xovee-cv.sty` | Shared typography, spacing, entry environments, and helper commands |
 | `cv.pdf` | Compiled example |
-| `example.png` | First-page preview used in this README |
 
 Keeping presentation rules in `xovee-cv.sty` makes global changes predictable. Ordinary CV updates should normally touch only `cv.tex` and `content.tex`.
 
-## Attribution
+## Layout and customization
 
-The source header, README, repository metadata, and default final-page footer identify this as **LaTeX CV Template by Xovee Xu** and link to the original project. When redistributing the template or a substantial modified version, keep the MIT license and a clear link to the original project. The rendered footer is intentionally optional because some CV submission contexts require unbranded output.
+Different types of CV content use layouts suited to how they are read:
 
-## Design system
-
-The template uses four record families instead of forcing every section into one visual shape:
-
-| Record family | Best for | Reading pattern |
+| Content | Layout | Commands |
 | --- | --- | --- |
-| Citation records | Publications, patents, theses | Conventional bibliographic order in numbered lists |
-| Chronology-led records | Funding, talks | Fixed year column followed by aligned details |
-| Subject-led dated records | Education, appointments, awards, artifacts, teaching, employment | Main subject at left, concise date at right, aligned continuation lines |
-| Registers and statistics | Memberships, profiles, service lists, summaries | Compact label-value alignment |
+| Publications, patents, and theses | Numbered citations | `\item` (in `enumerate`) |
+| Funding and talks | Year at left, details aligned beside it | `\cvfundingitem`, `\cvtalkitem` |
+| Education, appointments, awards, and teaching | Main entry at left, date at right, details below | `\cvdateditem`, `\cvdaterow` |
+| Memberships, profiles, and service lists | Compact lists with aligned labels and details | `\cvmembershipitem`, `\cvregisterrow` |
 
-The main reusable interfaces are:
+To add an entry, copy a similar example in `content.tex` and replace its content. Add, remove, or reorder sections as needed.
 
-- `\cvsection` and `\cvsubsection` for document hierarchy;
-- `cvrecordlist`, `\cvdaterow`, `\cvdateditem`, and `\cvundateditem` for subject-led records;
-- `cvchronologylist`, `\cvfundingitem`, and `\cvtalkitem` for chronology-led records;
-- `cvregister`, `\cvregisterrow`, `\cvlabel`, and `\cvmembershipitem` for compact registers;
-- `\doi`, `\equalcontrib`, `\corresponding`, `\cvpublicationlegend`, and `\cvdistinction` for publication details.
+For changes to fonts, spacing, or alignment throughout the CV, edit the shared definitions in `xovee-cv.sty`.
 
-Prefer these shared interfaces over local `\hspace`, `\vspace`, `\makebox`, or page-break fixes. If a recurring layout rule needs to change, update the shared definition and review every consumer.
+## Tips
 
-## Editorial guidance
+- Tailor the CV to your needs and highlight what matters most.
+- Less formatting is often more. Consistency is key.
 
-- Keep the first page selective and place the strongest identifying information first.
-- Delete sections that do not serve the document; do not leave empty placeholders.
-- Use the most precise verified date and a consistent date style.
-- Let LaTeX paginate naturally. A sparse final page is preferable to record-specific spacing tricks.
-- Use bold and color sparingly. The red distinction helper is intended only for a distinction directly attached to a scholarly work.
-- Prefer durable scholarly or institutional links, such as DOI, repository, project, or profile URLs.
+Further reading: [Academic Job Search - CV (UC Berkeley)](https://career.berkeley.edu/grad-students-postdocs/academic-job-search/the-cv-part-1-overview/).
 
-## Paper, font, and compiler compatibility
+## Paper, font, and compilers
 
-The default is A4 paper, 10-point Libertinus serif type, and one-inch margins. To use US Letter, change `a4paper` to `letterpaper` in `cv.tex`; the geometry package inherits that document-level paper choice.
+The default is A4 paper, 10-point Libertinus serif type, and one-inch margins. To use US Letter, change `a4paper` to `letterpaper` in `cv.tex`.
 
-The template avoids engine-specific font setup and is tested with pdfLaTeX, XeLaTeX, and LuaLaTeX on TeX Live 2024 or newer. pdfLaTeX is the canonical build used for the committed example:
+To use a different font, replace the `libertinus` package in `xovee-cv.sty` with your preferred font setup. See the [LaTeX Font Catalogue](https://tug.org/FontCatalogue/) for options.
 
-```text
-latexmk -pdf -interaction=nonstopmode -halt-on-error cv.tex
-latexmk -xelatex -interaction=nonstopmode -halt-on-error cv.tex
-latexmk -lualatex -interaction=nonstopmode -halt-on-error cv.tex
-```
-
-Modern LaTeX treats source files as UTF-8. For CJK text, add the language support appropriate to your chosen engine and installed fonts; keep it optional if the CV does not use CJK so the default dependency set stays small.
+The default template supports pdfLaTeX, XeLaTeX, and LuaLaTeX. The included PDF is compiled with pdfLaTeX.
 
 ## Publications and BibTeX
 
-The sample types publications manually for full control and minimal dependencies. If you prefer BibTeX or `biblatex`, add a `.bib` file and the bibliography package of your choice; keep the citation ordering and visible fields consistent with the rest of the CV.
+Publications are entered manually (my preferred approach) for full control and minimal dependencies. If you prefer BibTeX or `biblatex`, add a `.bib` file and the bibliography package of your choice; keep the citation ordering and visible fields consistent with the rest of the CV.
 
-## Maintainer release and Overleaf synchronization
+## Attribution
 
-GitHub is the source of truth. For each release:
-
-1. Update the version and source files on GitHub.
-2. Compile all three engines and inspect warnings, extracted text, and every rendered page.
-3. Regenerate `cv.pdf` with pdfLaTeX and `example.png` from its first page.
-4. Push the focused GitHub commit and confirm the compile workflow passes.
-5. Pull the GitHub changes into the original Overleaf project if it is already linked, or update that original project with the same source files.
-6. Recompile in Overleaf and compare the source file list, visible text, page count, and first-page rendering with the GitHub release.
-7. Resubmit the same original project to the Overleaf Gallery. Gallery updates are not published until Overleaf approves them.
-8. After approval, confirm the public page shows the new version and that its license metadata is **MIT**.
-
-Do not maintain independent edits in GitHub and Overleaf. Overleaf's GitHub synchronization is manual rather than automatic, and concurrent edits can create conflicts.
+If you share a modified version of this template, a link back to [this repository](https://github.com/Xovee/latex-cv) is appreciated.
 
 ## License
 
-This project is released under the [MIT License](LICENSE).
+[MIT](LICENSE)
 
 ## Contact
 
-Suggestions and bug reports are welcome through [GitHub Issues](https://github.com/Xovee/latex-cv/issues).
+[Xovee Xu](https://www.xoveexu.com)
+
+Email: `xovee.xu at gmail.com`
+
+Suggestions and bug reports are welcome through [Issues](https://github.com/Xovee/latex-cv/issues). Contributions and improvements are welcome via [pull requests](https://github.com/Xovee/latex-cv/pulls).

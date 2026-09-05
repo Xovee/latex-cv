@@ -10,3 +10,4 @@
 *.bcf
 *.blg
 *.run.xml
+/.build/
